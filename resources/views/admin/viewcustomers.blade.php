@@ -11,7 +11,7 @@
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                <h4 class="card-title">Manage Customers</h4>
+                <h4 class="card-title">View Customers </h4>
                   <p class="card-description">
                  
                   </p>
