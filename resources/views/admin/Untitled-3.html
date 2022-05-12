@@ -1,0 +1,71 @@
+
+@extends('admin.header')
+
+@section('content')
+      <!-- partial -->
+            <div class="col-lg-10 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Bordered table</h4>
+                  <p class="card-description">
+                    Add class <code>.table-bordered</code>
+                  </p>
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>
+                            S/N
+                          </th>
+                          <th>
+                          Customers Name
+                          </th>
+                          <th>
+                            Email
+                          </th>
+                          <th>
+                            Phone Number
+                          </th>
+                          <th>
+                            Gender
+                          </th>
+                          <th>
+                            Birthday
+                          </th>
+
+                          <th>
+                            Action
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      @foreach($customers as $customer)
+                        <tr>
+                        <td>{{$customer['id']}}</td>
+                          <td>{{$customer['customersname']}}</td>
+                          <td class="font-weight-bold">{{ $customer['email']}}</td>
+                          <td>{{ $customer['phonenumber']}}</td>
+
+                          <td>{{ $customer['gender'] }}</td>
+                          <td>{{ $customer['birthday'] }}</td>
+                          <td class="font-weight-medium"><div class="badge badge-success"><a href="{{ url('edit/'.$customer['id']) }}"></a>>Edit</div></a>
+                          <div class="badge badge-warning">Delete</div>
+                        </td>
+                         
+                        </tr>
+                       @endforeach
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+     
+       @include('admin.footer')
+       @endsection
+</body>
+</html>
+
+     
+
