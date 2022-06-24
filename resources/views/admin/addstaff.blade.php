@@ -19,26 +19,60 @@
                       {{ Session::get('message') }}
 </div>
 <br>
-                    <div class="form-group">
+                   <div class="form-group">
                       <label for="exampleInputUsername1">Staff Name</label>
-                      <input type="text" class="form-control" name="staffname" id="exampleInputUsername1" placeholder="Staff Name">
+              
+                      @error('staffname')
+    <div style ="color:red;font-size:12px;">
+
+        {{$message}}
+
+    </div>
+    @enderror
+    <br>
+
+                      <input type="text" class="form-control" name="staffname" value="{{old('staffname') }}" @error ('staffname') style="border:1px solid red;" @enderror id="exampleInputUsername1" placeholder="Staff Name">
+                
                     </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Email</label>
-                      <input type="email" class="form-control"  name="email" id="exampleInputEmail1" placeholder="Email">
-                    </div>
+                    
                    
+
+                    <div class="form-group">
+                      <label for="exampleInputConfirmPassword1">Email</label>
+
+                      @error('email')
+    <div style ="color:red;font-size:12px;">
+        {{$message}}
+
+    </div>
+    @enderror<br>
+
+                      <input type="text"  value="{{old('email') }}" @error ('email') style="border:1px solid red;" @enderror name="email" class="form-control" id="exampleInputConfirmPassword1" placeholder="Email">
+                    </div>
                     
 
-                    
                     <div class="form-group">
                       <label for="exampleInputConfirmPassword1">Phone Number</label>
-                      <input type="text"  name="phonenumber" class="form-control" id="exampleInputConfirmPassword1" placeholder="Phone Number">
+
+                      @error('phonenumber')
+    <div style ="color:red;font-size:12px;">
+        {{$message}}
+
+    </div>
+    @enderror<br>
+
+                      <input type="text"  value="{{old('phonenumber') }}" @error ('phonenumber') style="border:1px solid red;" @enderror name="phonenumber" class="form-control" id="exampleInputConfirmPassword1" placeholder="Phone Number">
                     </div>
 
                     <div class="form-group">
                       <label for="exampleInputConfirmPassword1">Gender</label>
-                      <select class="form-control" name="gender">
+                      @error('gender')
+    <div style ="color:red;font-size:12px;">
+        {{$message}}
+
+    </div>
+    @enderror<br>
+                      <select class="form-control" name="gender" value="{{ old('gender') }}" @error ('gender') style="border:1px solid red;" @enderror>
                               <option>Male</option>
                               <option>Female</option>
                             </select>
@@ -46,22 +80,43 @@
 
                     <div class="form-group">
                       <label for="exampleInputConfirmPassword1">Birthday</label>
-                      <input type="text"  name="birthday" class="form-control" id="exampleInputConfirmPassword1" placeholder="Birthday">
+                      
+                      @error('birthday')
+    <div style ="color:red;font-size:12px;">
+        {{$message}}
+
+    </div>
+    @enderror<br>
+
+                      <input type="text"  name="birthday" value="{{ old('birthday') }}" @error ('birthday') style="border:1px solid red;" @enderror class="form-control" id="exampleInputConfirmPassword1" placeholder="Birthday">
                     </div>
 
                     <div class="form-group">
                       <label for="exampleInputConfirmPassword1">Address</label>
-                      <input type="text" name="address" class="form-control" id="exampleInputConfirmPassword1" placeholder="Total Address">
+                      @error('address')
+    <div style ="color:red;font-size:12px;">
+        {{$message}}
+
+    </div>
+    @enderror<br>
+
+                      <input type="text" name="address" value="{{ old('address') }}" @error ('address') style="border:1px solid red;" @enderror class="form-control" id="exampleInputConfirmPassword1" placeholder="Total Address">
                     </div>
 
                     <div class="form-group">
                       <label for="exampleInputConfirmPassword1">Password</label>
-                      <input type="password" name="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">
+                      <input type="password" name="password"  @error('password')  style="border:1px solid red" @enderror class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">
+                      @error('password')
+    <div style="color:red;">
+    {{$message}}
+</div>
+@enderror
+                    
                     </div>
 
                     <div class="form-group">
                       <label for="exampleInputConfirmPassword1">Confirm Password</label>
-                      <input type="text" name="password_confirmation" class="form-control" id="exampleInputConfirmPassword1" placeholder="Confirm Password">
+                      <input type="password" name="password_confirmation" class="form-control" id="exampleInputConfirmPassword1" placeholder="Confirm Password">
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Add Staff</button>
                     <button class="btn btn-light">Cancel</button>

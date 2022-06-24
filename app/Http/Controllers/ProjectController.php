@@ -121,5 +121,8 @@ class ProjectController extends Controller
     public function destroy($id)
     {
         //
+        $data = Project::find($id);
+        $data->delete();
+        return redirect('viewprojects')->with('message','Project Deleted Successfully');
     }
 }

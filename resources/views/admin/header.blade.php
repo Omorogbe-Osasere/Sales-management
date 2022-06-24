@@ -343,8 +343,8 @@
             </a>
             <div class="collapse" id="charts">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/addcustomer">Add New Customer</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/viewcustomers">Edit Customer</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/addcustomer">Add New Customer</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/viewcustomers">Edit Customer</a></li>
               </ul>
             </div>
           </li>
@@ -356,10 +356,10 @@
             </a>
             <div class="collapse" id="tables">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/addsales">Add Sales</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/viewsales">Edit Sales</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/addsales">Add Returns</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/addsales">Edit Returns</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/addsales">Add Sales</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/viewsales">Edit Sales</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/addsales">Add Returns</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/addsales">Edit Returns</a></li>
               </ul>
             </div>
           </li>
@@ -371,8 +371,8 @@
             </a>
             <div class="collapse" id="icons">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/addproduct">Add New Product</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/viewproducts">Edit Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/addproduct">Add New Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/viewproducts">Edit Product</a></li>
               </ul>
             </div>
 
@@ -386,8 +386,8 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/addproject"> Add New Project </a></li>
-                <li class="nav-item"> <a class="nav-link" href="/viewprojects"> Edit Project</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/addproject"> Add New Project </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/viewprojects"> Edit Project</a></li>
               </ul>
             </div>
           </li>
@@ -399,8 +399,8 @@
             </a>
             <div class="collapse" id="error">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/addstaff"> Add New Staff </a></li>
-                <li class="nav-item"> <a class="nav-link" href="/viewstaff"> Edit Staff </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/addstaff"> Add New Staff </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/viewstaff"> Edit Staff </a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> Staff Payroll </a></li>
               </ul>
             </div>

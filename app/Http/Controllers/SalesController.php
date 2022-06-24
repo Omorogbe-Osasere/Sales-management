@@ -106,6 +106,16 @@ class SalesController extends Controller
         return redirect('viewsales')->with('message','Updated Successfully');
     }
 
+    public function reciept(Request $request, $id){
+
+        $data = Sales::find($id);
+        $data -> customersname= $request->input('customersname');
+        $data -> productname= $request->input('productname');
+        $data -> price= $request->input('price');
+        $data -> quantity=$request->input('quantity');
+        $data -> totalprice = $request->input('totalprice');
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -115,5 +125,8 @@ class SalesController extends Controller
     public function destroy($id)
     {
         //
+        $data = Sales::find($id);
+        $data->delete();
+        return redirect('viewsales')->with('message','Sale Deleted Successfully');
     }
 }

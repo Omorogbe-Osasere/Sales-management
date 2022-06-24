@@ -68,7 +68,7 @@ class CustomerController extends Controller
     public function show()
     {
         //
-        $data = Customer::Paginate(3);
+        $data = Customer::Paginate(5);
         return view('admin.viewcustomers', compact('data'));
       
     }
@@ -122,5 +122,9 @@ class CustomerController extends Controller
     public function destroy($id)
     {
         //
+        $data = Customer::find($id);
+        $data->delete();
+        return redirect('viewcustomers')->with('message','Customer Deleted Successfully');
+
     }
 }

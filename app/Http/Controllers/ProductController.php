@@ -127,5 +127,8 @@ class ProductController extends Controller
     public function destroy($id)
     {
         //
+        $data = Product::find($id);
+        $data->delete();
+        return redirect('viewproducts')->with('message','Product Deleted Successfully');
     }
 }

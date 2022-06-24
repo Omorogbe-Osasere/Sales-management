@@ -118,7 +118,7 @@ style="border-radius:5px;width:200px;">+Add New Sales</button></a></p>
                           <td>{{ $row->purchasedfrom }}</td>
                           
                           <td class="font-weight-medium"><div class="badge badge-success" ><i class="icon-edit menu-icon"></i><a  style ="color:white;" href="{{ url('editproduct/'.$row['id']) }}">Edit</div></a>
-                          <div class="badge badge-warning"><i class="icon-delete menu-icon"></i></div>
+                          <div class="badge badge-warning"><a href="{{ url('delete-products/'.$row['id']) }}"><i class="icon-delete menu-icon"></a></i></div>
                         </td>
                          
                         </tr>

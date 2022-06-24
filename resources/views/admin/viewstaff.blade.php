@@ -82,7 +82,7 @@
                   <div style="color:green;">
                       {{ Session::get('message') }}
 </div><br>
-                  <table class="table table-bordered">
+<table class="table table-bordered table-dark table-hover table-sm">
                       <thead>
                         <tr>
                           <th>
@@ -92,6 +92,7 @@
                           <th>Email</th>
                           <th>Phone Number</th>
                           <th>Birthday</th>
+                          <th>Gender</th>
                           <th>Address</th>
                           <th>Action</th>
                         </tr>
@@ -106,15 +107,16 @@
                           <td>{{ $row->phonenumber}}</td>
 
                           <td>{{ $row->birthday }}</td>
+                          <td>{{ $row->gender }}</td>
                           <td>{{ $row->address }}</td>
 
                       
                           
+                        
+
                           <td class="font-weight-medium"><div class="badge badge-success" ><i class="icon-edit menu-icon"></i></i><a  style ="color:white;" href="{{ url('editstaff/'.$row['id']) }}">Edit</div></a>
-                          <div class="badge badge-warning"><i class="icon-trash menu-icon"></i></div>
-                          
+                          <div class="badge badge-warning"><a href="{{ url('delete-staff/'.$row['id']) }}"><i class="icon-delete menu-icon"></a></i></div>
                         </td>
-                         
                         </tr>
                        @endforeach
                         

@@ -110,10 +110,9 @@
                       
                           
                           <td class="font-weight-medium"><div class="badge badge-success" ><i class="icon-edit menu-icon"></i></i><a  style ="color:white;" href="{{ url('editsales/'.$row['id']) }}">Edit</div></a>
-                          <div class="badge badge-warning"><i class="icon-trash menu-icon"></i></div>
-                          <div class="badge badge-secondary"
-                          style="color:white;"><i class="icon-reciept menu-icon"></i>Reciept</div>
-                        </td>
+                          <div class="badge badge-warning"><i class="icon-file menu-icon"></i>Reciept</div>
+                          <div class="badge badge-warning"><a href="{{ url('delete-sales/'.$row['id']) }}"><i class="icon-delete menu-icon"></a></i></div>
+  </td>
                          
                         </tr>
                        @endforeach

@@ -59,6 +59,7 @@ class StaffController extends Controller
              'birthday'=>$request->birthday,
              'address'=>$request->address,
              'password'=>Hash::make($request->password),
+             
          ]);
        
           return redirect('viewstaff')->with('message','Staff Successfully Added');
@@ -88,6 +89,8 @@ class StaffController extends Controller
     public function edit($id)
     {
         //
+        $data = Staff::find($id);
+        return view('admin.editstaff',compact('data'));
     }
 
     /**
@@ -100,6 +103,16 @@ class StaffController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $data = Staff::find($id);
+        $data -> staffname= $request->input('staffname');
+        $data -> email= $request->input('email');
+        $data -> phonenumber= $request->input('phonenumber');
+        $data -> gender=$request->input('gender');
+        $data -> birthday = $request->input('birthday');
+        $data -> address = $request->input('address');
+      
+        $data->update();
+        return redirect('viewstaff')->with('message','Updated Successfully');
     }
 
     /**
@@ -111,5 +124,8 @@ class StaffController extends Controller
     public function destroy($id)
     {
         //
+        $data = Staff::find($id);
+        $data->delete();
+        return redirect('viewstaff')->with('message','Staff Deleted Successfully');
     }
 }
