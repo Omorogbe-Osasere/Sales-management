@@ -15,7 +15,7 @@
                 
                 
 
-                  <form method="Post" class="forms-sample" action="{{ url('update-sales/'.$data->id) }}">  
+                  <form method="Post" class="forms-sample" action="{{ url('admin/update-sales/'.$data->id) }}">  
    
                       @csrf
                     

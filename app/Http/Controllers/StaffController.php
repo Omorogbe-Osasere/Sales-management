@@ -48,7 +48,8 @@ class StaffController extends Controller
             'birthday'=>'required|max:255',
             'address'=>'required|max:255',
              'password'=>'required|confirmed',
-             
+             'role'=>'required',
+             'position'=>'required|max:255',
          ]);
 
          staff::Create([
@@ -59,10 +60,12 @@ class StaffController extends Controller
              'birthday'=>$request->birthday,
              'address'=>$request->address,
              'password'=>Hash::make($request->password),
+             'position'=>$request->position,
+             'role'=>$request->role,
              
          ]);
        
-          return redirect('viewstaff')->with('message','Staff Successfully Added');
+          return redirect('admin/viewstaff')->with('message','Staff Successfully Added');
           
 
     }
@@ -110,9 +113,12 @@ class StaffController extends Controller
         $data -> gender=$request->input('gender');
         $data -> birthday = $request->input('birthday');
         $data -> address = $request->input('address');
+        $data -> position = $request->input('position');
+        $data -> role = $request->input('role');
+
       
         $data->update();
-        return redirect('viewstaff')->with('message','Updated Successfully');
+        return redirect('admin/viewstaff')->with('message','Updated Successfully');
     }
 
     /**
@@ -126,6 +132,6 @@ class StaffController extends Controller
         //
         $data = Staff::find($id);
         $data->delete();
-        return redirect('viewstaff')->with('message','Staff Deleted Successfully');
+        return redirect('admin/viewstaff')->with('message','Staff Deleted Successfully');
     }
 }

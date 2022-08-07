@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class staff extends Model
 {
@@ -16,7 +17,14 @@ class staff extends Model
          'gender',
           'birthday',
           'address',
-           'password'
+           'password',
+           'role',
+           'position'
+    ];
+
+    protected $hidden = [
+        'password',
+        'remember_token',
     ];
     
 }

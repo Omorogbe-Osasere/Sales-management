@@ -29,8 +29,8 @@
     </div>
     <div class="col-sm-" style="margin-left:15%;">
     <div class="input-group">
-    <button type="button" class="btn btn-primary" style="margin-left:5px;
-  border-radius:5px;">+Add Sales</button>
+    <a href="admin/addsales"><button type="button" class="btn btn-primary" style="margin-left:5px;
+  border-radius:5px;">+Add Sales</button></a>
   <button type="button" class="btn btn-primary" style="margin-left:5px;
   border-radius:5px">Export CSV</button>
 </div>
@@ -43,7 +43,7 @@
 
                    <h1> No Records</h1>
 <p>No Record(s) found. Record will appear here once created.</p>
-<p><a href="/addsales"><button type="button" class="btn btn-primary"
+<p><a href="/admin/addsales"><button type="button" class="btn btn-primary"
  style="border-radius:5px;width:200px;">+Add New Sales</button></a></p>
 
 
@@ -70,7 +70,7 @@
 
     <div class="col-sm-" style="margin-left:15%;">
     <div class="input-group">
-    <a href="/addsales"><button type="button" class="btn btn-primary" style="margin-left:5px;
+    <a href="/admin/addsales"><button type="button" class="btn btn-primary" style="margin-left:5px;
   border-radius:5px;">+Add Sales</button></a>
   <button type="button" data-href="/tasks" id="export" class="btn btn-primary" style="margin-left:5px;
   border-radius:5px">Export CSV</button>
@@ -109,9 +109,10 @@
 
                       
                           
-                          <td class="font-weight-medium"><div class="badge badge-success" ><i class="icon-edit menu-icon"></i></i><a  style ="color:white;" href="{{ url('editsales/'.$row['id']) }}">Edit</div></a>
-                          <div class="badge badge-warning"><i class="icon-file menu-icon"></i>Reciept</div>
-                          <div class="badge badge-warning"><a href="{{ url('delete-sales/'.$row['id']) }}"><i class="icon-delete menu-icon"></a></i></div>
+                          <td class="font-weight-medium"><div class="badge badge-success" ><i class="icon-edit menu-icon"></i></i><a  style ="color:white;" href="{{ url('admin/editsales/'.$row['id']) }}">Edit</div></a>
+
+                          <td class="font-weight-medium"><div class="badge badge-success" ><i class="icon-file menu-icon"></i></i><a  style ="color:white;" target="_blank" href="{{ url('admin/salesreceipt/'.$row['id']) }}">Receipt</div></a>
+                          <div class="badge badge-warning"><a href="{{ url('admin/delete-sales/'.$row['id']) }}"><i class="icon-delete menu-icon"></a></i></div>
   </td>
                          
                         </tr>

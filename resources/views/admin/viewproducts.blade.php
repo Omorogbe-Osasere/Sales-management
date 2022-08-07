@@ -99,6 +99,7 @@ style="border-radius:5px;width:200px;">+Add New Sales</button></a></p>
                           <th>Total Price</th>
                           
                           <th>Purchased From</th>
+                          <th>Image</th>
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -116,9 +117,11 @@ style="border-radius:5px;width:200px;">+Add New Sales</button></a></p>
                           <td>{{ $row->unitprice }}</td>
                          
                           <td>{{ $row->purchasedfrom }}</td>
+                         
+                          <td><img src="{{asset('uploads/' .$row->image_path)}}" alt=""></td>
                           
-                          <td class="font-weight-medium"><div class="badge badge-success" ><i class="icon-edit menu-icon"></i><a  style ="color:white;" href="{{ url('editproduct/'.$row['id']) }}">Edit</div></a>
-                          <div class="badge badge-warning"><a href="{{ url('delete-products/'.$row['id']) }}"><i class="icon-delete menu-icon"></a></i></div>
+                          <td class="font-weight-medium"><div class="badge badge-success" ><i class="icon-edit menu-icon"></i><a  style ="color:white;" href="{{ url('admin/editproduct/'.$row['id']) }}">Edit</div></a>
+                          <div class="badge badge-warning"><a href="{{ url('admin/delete-products/'.$row['id']) }}"><i class="icon-delete menu-icon"></a></i></div>
                         </td>
                          
                         </tr>

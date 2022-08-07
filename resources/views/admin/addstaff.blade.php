@@ -104,6 +104,18 @@
                     </div>
 
                     <div class="form-group">
+                    <label for="exampleInputConfirmPassword1">Make An Admin</label>
+                   <input type="radio" name="role" value="1"> Yes
+                   <input type="radio" name="role" value="0"> No
+                    </div>
+
+                    <div class="form-group">
+                    <label for="exampleInputConfirmPassword1">Position</label>
+                   <input type="text" name="position" class="form-control">
+                    </div>
+                    
+                    
+                    <div class="form-group">
                       <label for="exampleInputConfirmPassword1">Password</label>
                       <input type="password" name="password"  @error('password')  style="border:1px solid red" @enderror class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">
                       @error('password')

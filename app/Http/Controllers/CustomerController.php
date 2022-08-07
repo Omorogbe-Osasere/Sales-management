@@ -56,7 +56,7 @@ class CustomerController extends Controller
               'address'=>$request->address,
          ]);
 
-         return redirect('viewcustomers')->with('message','Customer Added Successfully');
+         return redirect('admin/viewcustomers')->with('message','Customer Added Successfully');
     }
 
     /**
@@ -109,7 +109,7 @@ class CustomerController extends Controller
         $data -> birthday= $request->input('birthday');
         $data -> birthday= $request->input('address');
         $data->update();
-        return redirect('viewcustomers')->with('message','Customer Updated Successfully');
+        return redirect('admin/viewcustomers')->with('message','Customer Updated Successfully');
 
     }
 
@@ -124,7 +124,7 @@ class CustomerController extends Controller
         //
         $data = Customer::find($id);
         $data->delete();
-        return redirect('viewcustomers')->with('message','Customer Deleted Successfully');
+        return redirect('admin/viewcustomers')->with('message','Customer Deleted Successfully');
 
     }
 }

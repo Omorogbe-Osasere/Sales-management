@@ -29,6 +29,11 @@
 <div style="margin-left:20px;">
 <h3 class="text-center"><a href="index.html" style="color:black;text-decoration: none;"><span style="color:#C70A7D;">in</span>Vent45</a></h3><br>
 
+<div style="color:green">
+
+               <p>{{Session::get('message')}}<p>
+               
+</div>
 
 @if(session('status'))
 

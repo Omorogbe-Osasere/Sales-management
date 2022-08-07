@@ -37,6 +37,19 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
+        //Method we can use for the request 
+        //Guess Extension
+        //GetMimeType
+        //Store()
+        //asStore()
+        //storePublicly()
+        //Move()
+        //getClientOriginal name
+        //GuessClientMimeType
+        //GuessClientExtension
+        //GetSize
+        //GetError
+        //IsValid
 
         $this->validate($request,[
             'productname'=>'required|max:255',
@@ -46,8 +59,13 @@ class ProductController extends Controller
             'category'=>'required|max:255',
             'unitprice'=>'required|max:255',
             'description'=>'required|max:255',
-            'purchasedfrom'=>'required|max:255'
+            'purchasedfrom'=>'required|max:255',
+            'image'=>'required|mimes:jpg,png,jpeg|max:5048'
          ]);
+
+         $newImageName = time().'-'. $request->name .'-'. $request->image->extension();
+         $request->image->move(public_path('uploads'), $newImageName);
+
          Product::Create([
              'productname'=>$request->productname,
               'price'=>$request->price,
@@ -57,9 +75,10 @@ class ProductController extends Controller
               'unitprice'=>$request->unitprice,
               'description'=>$request->description,
               'purchasedfrom'=>$request->purchasedfrom,
+               'image_path'=>$newImageName,
          ]);
 
-         return redirect('viewproducts')->with('message','Product Added Successfully');
+         return redirect('admin/viewproducts')->with('message','Product Added Successfully');
     }
 
     /**
@@ -113,7 +132,7 @@ class ProductController extends Controller
         $data -> description= $request->input('description');
         $data -> purchasedfrom= $request->input('purchasedfrom');
         $data->update();
-        return redirect('viewproducts')->with('message','Product Updated Successfully');
+        return redirect('admin/viewproducts')->with('message','Product Updated Successfully');
 
 
     }
@@ -129,6 +148,6 @@ class ProductController extends Controller
         //
         $data = Product::find($id);
         $data->delete();
-        return redirect('viewproducts')->with('message','Product Deleted Successfully');
+        return redirect('admin/viewproducts')->with('message','Product Deleted Successfully');
     }
 }

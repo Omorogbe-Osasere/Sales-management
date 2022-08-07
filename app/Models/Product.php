@@ -18,6 +18,7 @@ class Product extends Model
            'unitprice',
            'description',
            'purchasedfrom',
+           'image_path'
         
 
     ];

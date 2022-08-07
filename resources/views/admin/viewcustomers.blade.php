@@ -83,7 +83,7 @@
 
                        
                           
-                          <td class="font-weight-medium"><div class="badge badge-success" ><i class="icon-edit menu-icon"></i></i><a  style ="color:white;" href="{{ url('editcustomer/'.$row['id']) }}">Edit</div></a>
+                          <td class="font-weight-medium"><div class="badge badge-success" ><i class="icon-edit menu-icon"></i></i><a  style ="color:white;" href="{{ url('admin/editcustomer/'.$row['id']) }}">Edit</div></a>
                           <div class="badge badge-warning"><a href="{{ url('delete-customer/'.$row['id']) }}"><i class="icon-delete menu-icon"></a></i></div>
                         </td>
                         

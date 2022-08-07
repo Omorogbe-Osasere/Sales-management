@@ -7,8 +7,8 @@
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
-                   
-        
+                    
+    
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
@@ -27,7 +27,7 @@
   border-radius:5px">Search</button>
 </div><br>
     </div>
-    <div class="col-sm-" style="margin-left:15%;">
+    <div class="col-sm-" style="margin-left:15%;"> 
     <div class="input-group">
     <a href="/addstaff"><button type="button" class="btn btn-primary" style="margin-left:5px;
   border-radius:5px;">+Add Staff</button></a>
@@ -94,6 +94,7 @@
                           <th>Birthday</th>
                           <th>Gender</th>
                           <th>Address</th>
+                          <th>Role</th>
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -110,12 +111,21 @@
                           <td>{{ $row->gender }}</td>
                           <td>{{ $row->address }}</td>
 
-                      
+                          <td>
+                             @if ($row->role==1)
+                              Admin
+                            @else 
+                                User
+
+
+                          </td>
+
+                      @endif
                           
                         
 
-                          <td class="font-weight-medium"><div class="badge badge-success" ><i class="icon-edit menu-icon"></i></i><a  style ="color:white;" href="{{ url('editstaff/'.$row['id']) }}">Edit</div></a>
-                          <div class="badge badge-warning"><a href="{{ url('delete-staff/'.$row['id']) }}"><i class="icon-delete menu-icon"></a></i></div>
+                          <td class="font-weight-medium"><div class="badge badge-success" ><i class="icon-edit menu-icon"></i></i><a  style ="color:white;" href="{{ url('admin/editstaff/'.$row['id']) }}">Edit</div></a>
+                          <div class="badge badge-warning"><a href="{{ url('admin/delete-staff/'.$row['id']) }}"><i class="icon-delete menu-icon"></a></i></div>
                         </td>
                         </tr>
                        @endforeach

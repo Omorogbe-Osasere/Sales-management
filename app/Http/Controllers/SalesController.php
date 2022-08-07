@@ -54,7 +54,7 @@ class SalesController extends Controller
               'totalprice'=>$request->totalprice,
          ]);
 
-         return redirect('viewsales')->with('message','Sales Added Successfully');
+         return redirect('admin/viewsales')->with('message','Sales Added Successfully');
     }
 
     /**
@@ -103,18 +103,15 @@ class SalesController extends Controller
         $data -> totalprice = $request->input('totalprice');
       
         $data->update();
-        return redirect('viewsales')->with('message','Updated Successfully');
+        return redirect('admin/viewsales')->with('message','Updated Successfully');
     }
 
-    public function reciept(Request $request, $id){
+   // public function receipt($id){
 
-        $data = Sales::find($id);
-        $data -> customersname= $request->input('customersname');
-        $data -> productname= $request->input('productname');
-        $data -> price= $request->input('price');
-        $data -> quantity=$request->input('quantity');
-        $data -> totalprice = $request->input('totalprice');
-    }
+        //$data = Sales::find($id);
+       // return view('admin.editreceipt',compact('data'));
+       
+   // }
 
     /**
      * Remove the specified resource from storage.
@@ -127,6 +124,6 @@ class SalesController extends Controller
         //
         $data = Sales::find($id);
         $data->delete();
-        return redirect('viewsales')->with('message','Sale Deleted Successfully');
+        return redirect('admin/viewsales')->with('message','Sale Deleted Successfully');
     }
 }

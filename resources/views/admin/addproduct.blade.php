@@ -12,7 +12,7 @@
                   <p class="card-description">
                     Add New Product
                   </p>
-                  <form class="forms-sample" method="POST" action="{{ route('admin.addproduct') }}">
+                  <form class="forms-sample" method="POST" action="{{ route('admin.addproduct') }}" enctype="multipart/form-data">
                       @csrf
                        
                       <div style="color:green;">
@@ -46,7 +46,7 @@
                       </div>
                 
                       <input type="number" name="price"  value="{{old('price') }}" @error ('price') style="border:1px solid red;" @enderror placeholder="Price" class="form-control" aria-label="Amount (to the nearest dollar)">
-                      <div class="input-group-append">
+                      <div class="input-group-append"> 
                         <span class="input-group-text">.00</span>
                       </div>
                     </div>
@@ -83,7 +83,7 @@
 
     </div>
     @enderror<br>
-                      <input type="text" class="form-control"  value="{{old('category') }}" @error ('category') style="border:1px solid red;" @enderror  name="category" id="exampleInputEmail1" placeholder="Product Name">
+                      <input type="text" class="form-control"  value="number_format({{old('category') }})" @error ('category') style="border:1px solid red;" @enderror  name="category" id="exampleInputEmail1" placeholder="Product Name">
                     </div>
 
 
@@ -119,10 +119,20 @@
 
     </div>
     @enderror<br>
-                      <input type="text" name="purchasedfrom"  value="{{old('purchasedfrom') }}" @error ('purchasedfrom') style="border:1px solid red;" @enderror class="form-control" id="exampleInputConfirmPassword1" placeholder="Total Price">
+                      <input type="text" name="purchasedfrom" class="form-control" id="exampleInputConfirmPassword1" placeholder="purchasedfrom">
                     </div>
+
+                    <div class="form-group">
+                      <label for="exampleInputConfirmPassword1">Upload Image</label>
+  <br>
+                      <input type="file" name="image"  value="{{old('image') }}" class="form-control" id="exampleInputConfirmPassword1" placeholder="Image">
+                    </div>
+
+                  
                     
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                  
+   
                     <button class="btn btn-light">Cancel</button>
                   </form>
                 </div>

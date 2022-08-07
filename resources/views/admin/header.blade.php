@@ -304,7 +304,7 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar" >
         <ul class="nav" >
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="/dashboard">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
@@ -312,13 +312,13 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="icon-layout menu-icon"></i>
-              <span class="menu-title">Channels</span>
+              <span class="menu-title">Sell</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/add_advert">Post an Advert</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Edit Advert</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
               </ul>
             </div>
@@ -331,10 +331,14 @@
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
+                <li class="nav-item"><a class="nav-link" title="Add New Customer Order" href="pages/forms/basic_elements.html">Add New</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Edit Order</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Pending Order</a></li>
               </ul>
             </div>
           </li>
+
+        
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
               <i class="icon-bar-graph menu-icon"></i>
@@ -371,7 +375,7 @@
             </a>
             <div class="collapse" id="icons">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/admin/addproduct">Add New Product</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/addproduct"></i>Add New Purchase</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/admin/viewproducts">Edit Product</a></li>
               </ul>
             </div>
@@ -386,15 +390,15 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/admin/addproject"> Add New Project </a></li>
-                <li class="nav-item"> <a class="nav-link" href="/admin/viewprojects"> Edit Project</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/addproject"> Create New Task </a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/viewprojects"> Edit Task</a></li>
               </ul>
             </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
               <i class="icon-ban menu-icon"></i>
-              <span class="menu-title">Staff</span>
+              <span class="menu-title">Employee</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="error">

@@ -13,7 +13,7 @@
                     Add New Customer
                   </p>
                 
-                  <form method="Post" class="forms-sample" action="{{ url('update-customer/'.$data->id) }}">  
+                  <form method="Post" class="forms-sample" action="{{ url('admin/update-customer/'.$data->id) }}">  
    
                       @csrf
                     

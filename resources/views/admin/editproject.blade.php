@@ -15,7 +15,7 @@
                 
                 
 
-                  <form method="Post" class="forms-sample" action="{{ url('update-project/'.$data->id) }}">  
+                  <form method="Post" class="forms-sample" action="{{ url('admin/update-project/'.$data->id) }}">  
    
                       @csrf
                     
@@ -43,7 +43,7 @@
                     
                     <div class="form-group">
                       <label for="exampleInputConfirmPassword1">End Date</label>
-                      <input type="date" value="{{$data->enddate}}"   name="quantity" class="form-control" id="exampleInputConfirmPassword1" placeholder="Phone Number">
+                      <input type="date" value="{{$data->enddate}}"   name="enddate" class="form-control" id="exampleInputConfirmPassword1" placeholder="Phone Number">
                     </div>
 
                    

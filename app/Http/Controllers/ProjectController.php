@@ -57,7 +57,7 @@ class ProjectController extends Controller
 
         ]);
 
-        return redirect('viewprojects')->with('message','Project added successfully');
+        return redirect('admin/viewprojects')->with('message','Project added successfully');
         
     }
 
@@ -78,6 +78,10 @@ class ProjectController extends Controller
     
     }
 
+     public function edit2($id){
+        $data = Project::find($id);
+        return view ('admin.projectdetails',compact('data'));
+     }
     /**
      * Show the form for editing the specified resource.
      *
@@ -103,13 +107,13 @@ class ProjectController extends Controller
         //
         $data = Project::find($id);
         $data -> projectname= $request->input('projectname');
-        $data -> description= $request->input('projectdescription');
+        $data -> projectdescription= $request->input('projectdescription');
         $data -> startdate= $request->input('startdate');
         $data -> enddate= $request->input('enddate');
-        $data -> deadline= $request->input('dealine');
+        $data -> deadline= $request->input('deadline');
         $data -> assignedto= $request->input('assignedto');
         $data->update();
-        return redirect('viewproject')->with('message','Updated Successfully');
+        return redirect('admin/viewprojects')->with('message','Updated Successfully');
     }
 
     /**
@@ -123,6 +127,6 @@ class ProjectController extends Controller
         //
         $data = Project::find($id);
         $data->delete();
-        return redirect('viewprojects')->with('message','Project Deleted Successfully');
+        return redirect('admin/viewprojects')->with('message','Project Deleted Successfully');
     }
 }

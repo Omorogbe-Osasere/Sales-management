@@ -31,7 +31,7 @@
     <div class="col-sm-" style="margin-left:15%;">
     <div class="input-group">
     <a href="/addproject"><button type="button" class="btn btn-primary" style="margin-left:5px;
-  border-radius:5px;">+Add Staff</button></a>
+  border-radius:5px;">+Add Task</button></a>
   <button type="button" class="btn btn-primary" style="margin-left:5px;
   border-radius:5px">Export CSV</button>
 </div>
@@ -72,7 +72,7 @@
     <div class="col-sm-" style="margin-left:15%;">
     <div class="input-group">
     <a href="/addproject"><button type="button" class="btn btn-primary" style="margin-left:5px;
-  border-radius:5px;">+Add Proejct</button></a>
+  border-radius:5px;">+Add New Task</button></a>
   <button type="button" data-href="/tasks" id="export" class="btn btn-primary" style="margin-left:5px;
   border-radius:5px">Export CSV</button>
 </div>
@@ -97,9 +97,9 @@
  <p><strong>Assigned to: </strong>{{$row->assignedto}}</p>
  <p><strong>Start Date: </strong>{{$row->startdate}}</p>
  <p><strong>End Date: </strong>{{$row->enddate}}</p>
- <button type="submit" class="btn btn-primary"><i class="icon-eye menu-icon"></i></button>
-                    <a href="{{ url('editproject/'.$row['id']) }}"><button class="btn btn-light">Edit</button></a>
-                    <button class="btn btn-light"><i class="icon-delete menu-icon"></i></button>
+ <a href="{{ url('admin/projectdetails/'.$row['id']) }}"><button type="submit" class="btn btn-primary"><i class="icon-eye menu-icon"></i></a></button>
+                    <a href="{{ url('admin/editproject/'.$row['id']) }}"><button class="btn btn-light">Edit</button></a>
+                    <button class="btn btn-light"><i class="icon-delete menu-icon"></i><a href="{{ url('admin/deleteproject/'.$row['id']) }}"></a></button>
                   
  </div>
 

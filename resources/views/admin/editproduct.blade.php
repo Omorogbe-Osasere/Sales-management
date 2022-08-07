@@ -14,7 +14,7 @@
                   </p>
                   
    
-                  <form class="forms-sample" method="POST" action=" {{ url('update-product/'.$data->id) }}">
+                  <form class="forms-sample" method="POST" action=" {{ url('admin/update-product/'.$data->id) }}">
                       @csrf
                        
                       @method('PUT')
